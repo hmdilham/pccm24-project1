@@ -10,7 +10,7 @@ jobs:
 
       - name: Build and Tag Docker Image
         run: |
-          docker build -t alpine-github-action:v1 -f Dockerfile .
+          docker build -t ${{secrets.dockerhub_username}}/alpine-github-action:v1 -f Dockerfile .
       
       - name: Push to Dockerhub
         run: |
