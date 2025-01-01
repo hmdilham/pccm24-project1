@@ -15,6 +15,6 @@ jobs:
       - name: Push to Dockerhub
         run: |
           docker login -u ${{secrets.dockerhub_username}} -p ${{secrets.dockerhub_AccessToken}} && \
-          docker push ${{secrets.dockerhub_username}}/alpine-mod:v1
+          docker push ${{secrets.dockerhub_username}}/alpine-github-action:v1
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
